@@ -192,7 +192,7 @@ Persistent subscription to $all stream is only supported from EventStoreDB versi
 
 Unlike catch-up subscriptions, persistent subscriptions are fully managed by the database server. It is also possible to have multiple consumers for the same subscription, and the events will be distributed between them. The server also manages retries when a consumer fails to acknowledge the event. Because of the retries, batched delivery, and multiple consumers, persistent subscriptions don't guarantee ordered event processing.
 
-Read more about persistent subscriptions in the [EventStoreDB documentation](https://developers.eventstore.com/server/v21.10/persistent-subscriptions.html).
+Read more about persistent subscriptions in the [EventStoreDB documentation](https://developers.eventstore.com/clients/dotnet/21.2/subscriptions.html#persistent-subscriptions).
 
 There are some operations that must be completed before a persistent subscription starts working, In particular, the consumer group must be created on the server before a consumer can start consuming events. Eventuous implicitly creates a consumer group if necessary. The consumer group name is the same as the subscription id.
 
